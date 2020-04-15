@@ -3,7 +3,8 @@
         <div v-if="showForm">
             <el-form :model="form" :rules="rules" ref="form" label-width="1px" v-loading="loading"
                      element-loading-text="正在飞速计算中">
-                <p class="title">未来配对缘分测算</p>
+                <p class="title">配对缘分测算</p>
+                <p class="tips">请务必填写真实信息！</p>
                 <el-form-item label="" prop="name">
                     <el-input class="item" v-model="form.name" placeholder="请输入姓名"></el-input>
                 </el-form-item>
@@ -130,7 +131,14 @@
 </script>
 <style scoped>
     .title {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+    .tips {
+        font-size: small;
+        color: red;
+        font-weight: 500;
     }
 
     .item {
@@ -140,8 +148,6 @@
     .text {
         width: 90%;
         display: inline-block;
-        margin-top: 10px;
-        margin-bottom: 20px;
         text-align: left;
         font-size: small;
     }
