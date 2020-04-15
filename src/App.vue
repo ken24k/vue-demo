@@ -19,9 +19,9 @@
     }
 
     body {
-        background-image: url("./assets/form-bg-2.gif");
+        background: url("assets/img/form-bg-2.gif") no-repeat center;
         background-size: cover;
-        background-position: center;
+        font-weight: 300;
         z-index: -1;
     }
 
