@@ -1,8 +1,7 @@
 <template>
-    <div class="root">
+    <div class="root" v-loading="loading" element-loading-text="正在飞速计算中">
         <div v-if="showForm">
-            <el-form :model="form" :rules="rules" ref="form" label-width="1px" v-loading="loading"
-                     element-loading-text="正在飞速计算中">
+            <el-form :model="form" :rules="rules" ref="form" label-width="1px" >
                 <p class="title">配对缘分测算</p>
                 <p class="tips">请务必填写真实信息！</p>
                 <el-form-item label="" prop="name">
@@ -16,9 +15,7 @@
                 </el-form-item>
                 <el-form-item label="" prop="birthday">
                     <el-date-picker v-model="form.birthday" placeholder="请选择生日" style="width: 80%" type="date"
-                                    :editable="false"
-                                    format="yyyy 年 MM 月 dd 日"
-                                    value-format="yyyyMMdd"></el-date-picker>
+                                    :editable="false" format="yyyy 年 MM 月 dd 日" value-format="yyyyMMdd"></el-date-picker>
                 </el-form-item>
                 <p class="text">用姓名测试爱情，80%准确率！<br/>
                     俗话说，名如其人，缘分就是人生的后半生，为了寻找真缘分的大有人在，因此也就有了姓名缘分测试。<br/>
