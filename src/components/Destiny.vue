@@ -1,7 +1,7 @@
 <template>
     <div class="root" v-loading="loading" element-loading-text="正在飞速计算中">
         <div v-if="showForm">
-            <el-form :model="form" :rules="rules" ref="form" label-width="1px" >
+            <el-form :model="form" :rules="rules" ref="form" label-width="1px">
                 <p class="title">配对缘分测算</p>
                 <p class="tips">请务必填写真实信息！</p>
                 <el-form-item label="" prop="name">
@@ -15,17 +15,13 @@
                 </el-form-item>
                 <el-form-item label="" prop="birthday">
                     <el-date-picker v-model="form.birthday" placeholder="请选择生日" style="width: 80%" type="date"
-                                    :editable="false" format="yyyy 年 MM 月 dd 日" value-format="yyyyMMdd"></el-date-picker>
+                                    :editable="false" format="yyyy 年 MM 月 dd 日"
+                                    value-format="yyyyMMdd"></el-date-picker>
                 </el-form-item>
-                <p class="text">用姓名测试爱情，80%准确率！<br/>
-                    俗话说，名如其人，缘分就是人生的后半生，为了寻找真缘分的大有人在，因此也就有了姓名缘分测试。<br/>
-                    您现在是不是也正在心动犹豫，也想要一个属于自己的名字配对缘分测试了呢？那就请您赶紧行动吧！<br/>
-                    存在即有理，没有用的东西也是不会存在的，天以适者生存，姓名作为人与事物的接触外延，在人生中起着一个支柱桥梁的作用。<br/>
-                    名字就像是一个人的影子，这个影子的好坏将会直接影响到整个事物本身，因为如影随形。<br/>
-                    雁过留声，人过留名，大家都知道中国人的姓名是由中国的汉字组成，没有汉字根本就不存在中国的姓名学，这是姓名学当中一个最根本、最直接的道理。<br/>
-                    我们的名字离不开阴阳五行和八卦，读音和意境联系着我们的命运，每一笔一画都暗藏玄机，你和你心目中的他（她）是不是天生的一对，能不能够白头偕老，你们之间到底有怎样的姻缘，都能在你们的姓名中找到答案。
-                </p>
-                <el-form-item>
+                <div v-for="item in content" :key=item>
+                    <p class="text">{{item}}</p>
+                </div>
+                <el-form-item class="btn">
                     <el-button type="primary" @click="submitForm('form')">立即测算</el-button>
                     <el-button @click="resetForm()">重置</el-button>
                 </el-form-item>
@@ -41,6 +37,7 @@
     import sources1 from '../assets/data/destiny-source1.json';
     import sources2 from '../assets/data/destiny-source2.json';
     import targets from '../assets/data/destiny-target.json';
+    import content from '../assets/data/destiny-content.json';
     export default {
         name: 'Destiny',
         mounted(){
@@ -51,6 +48,7 @@
                 showForm: true,
                 loading: false,
                 resultName: '',
+                content: content,
                 form: {
                     name: '',
                     sex: '',
@@ -129,20 +127,24 @@
 <style scoped>
     .root {
         height: 1000px;
-        background: url("../assets/img/destiny-bg.gif") no-repeat center;
+        /*background: url("../assets/img/destiny-bg.gif") no-repeat center;*/
         background-size: cover;
         z-index: -1;
     }
 
     .title {
-        margin-bottom: 30px;
-        font-weight: bold;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        font-weight: 600;
+        font-size: large;
     }
 
     .tips {
         font-size: small;
         color: red;
         font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .item {
@@ -150,11 +152,17 @@
     }
 
     .text {
-        width: 90%;
+        width: 80%;
         display: inline-block;
-        text-align: left;
+        text-align: center;
         font-size: small;
+        margin-top: 0px;
+        margin-bottom: 3px;
         font-weight: 300;
+    }
+
+    .btn {
+        margin: 20px;
     }
 
     .result {
