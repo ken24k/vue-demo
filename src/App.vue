@@ -15,14 +15,12 @@
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
     }
 
     body {
-        background: url("assets/img/form-bg-2.gif") no-repeat center;
-        background-size: cover;
-        font-weight: 300;
-        z-index: -1;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 0;
     }
-
 </style>

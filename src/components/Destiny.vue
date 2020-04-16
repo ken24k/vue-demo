@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="root">
         <div v-if="showForm">
             <el-form :model="form" :rules="rules" ref="form" label-width="1px" v-loading="loading"
                      element-loading-text="正在飞速计算中">
@@ -130,6 +130,13 @@
     }
 </script>
 <style scoped>
+    .root {
+        height: 1000px;
+        background: url("../assets/img/destiny-bg.gif") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+    }
+
     .title {
         margin-bottom: 30px;
         font-weight: bold;
@@ -150,6 +157,7 @@
         display: inline-block;
         text-align: left;
         font-size: small;
+        font-weight: 300;
     }
 
     .result {

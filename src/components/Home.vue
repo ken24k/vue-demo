@@ -2,9 +2,6 @@
     <div>
         <ul>
             <li>
-                <router-link to="/Test">Test</router-link>
-            </li>
-            <li>
                 <router-link to="/HelloWorld">HelloWorld</router-link>
             </li>
             <li>
@@ -41,6 +38,7 @@
     ul {
         list-style-type: none;
         padding: 0;
+        font-size: small;
     }
 
     li {

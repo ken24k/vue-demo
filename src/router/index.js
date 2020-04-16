@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HelloWorld from "../components/HelloWorld.vue";
-import Test from "../components/Test.vue";
+import Home from "../components/Home.vue";
 import Destiny from "../components/Destiny.vue";
 
 Vue.use(VueRouter);
@@ -9,11 +9,11 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/',
-        redirect: '/Destiny'
+        redirect: '/Home'
     },
     {
-        path: "/Test",
-        component: Test
+        path: "/Home",
+        component: Home
     },
     {
         path: "/HelloWorld",
