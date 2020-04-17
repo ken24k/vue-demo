@@ -7,6 +7,12 @@
             <li>
                 <router-link to="/Destiny">Destiny</router-link>
             </li>
+            <li>
+                <router-link to="/AccountBook">AccountBook</router-link>
+            </li>
+            <li>
+                <router-link to="/NewsAndWeather">NewsAndWeather</router-link>
+            </li>
         </ul>
         <div id="btn-1">
             <el-button type="primary" v-on:click="counter += 1">按 {{counter}} 次</el-button>
@@ -16,7 +22,7 @@
 </template>
 <script>
     export default {
-        name: 'Test',
+        name: 'Home',
         data() {
             return {
                 counter: 0,

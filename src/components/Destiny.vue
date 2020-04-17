@@ -126,8 +126,8 @@
 </script>
 <style scoped>
     .root {
-        height: 1000px;
-        /*background: url("../assets/img/destiny-bg.gif") no-repeat center;*/
+        height: 100%;
+        background: url("../assets/img/destiny-bg.gif") no-repeat center;
         background-size: cover;
         z-index: -1;
     }
