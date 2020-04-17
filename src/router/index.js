@@ -4,7 +4,7 @@ import HelloWorld from "../components/HelloWorld.vue";
 import Home from "../components/Home.vue";
 import Destiny from "../components/Destiny.vue";
 import AccountBook from "../components/AccountBook.vue";
-import NewsAndWeather from "../components/NewsAndWeather.vue";
+import Entertainment from "../components/Entertainment.vue";
 
 Vue.use(VueRouter);
 
@@ -30,8 +30,8 @@ const routes = [
         component: AccountBook
     },
     {
-        path: "/NewsAndWeather",
-        component: NewsAndWeather
+        path: "/Entertainment",
+        component: Entertainment
     }
 ]
 

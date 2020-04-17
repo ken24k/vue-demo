@@ -11,7 +11,7 @@
                 <router-link to="/AccountBook">AccountBook</router-link>
             </li>
             <li>
-                <router-link to="/NewsAndWeather">NewsAndWeather</router-link>
+                <router-link to="/Entertainment">Entertainment</router-link>
             </li>
         </ul>
         <div id="btn-1">
