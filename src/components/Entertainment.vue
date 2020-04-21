@@ -179,7 +179,7 @@
                 axios.post('api/simpleWeather/query',
                     qs.stringify({
                         city: '上海',
-                        key: '8c0cea0f8d3201d975f4b34136b8b835' + '111'
+                        key: '8c0cea0f8d3201d975f4b34136b8b835'
                     })
                 ).then(response => {
                     console.log(JSON.stringify(response.data))
